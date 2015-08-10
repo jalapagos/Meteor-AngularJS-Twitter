@@ -1,0 +1,19 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="twitter-example.css">
+</head>
+<div ng-controller="TweetsCtrl">
+	<h1>Sign into Twitter! Picture and Handle will be displayed!</h1>
+
+	<div id = "title"> <meteor-include src="loginButtons"></meteor-include> </div>
+	<ul>
+		<br>
+		<div ng-repeat="t in twitterAccs">
+			<img src = "{{t.services.twitter.profile_image_url_https}}">
+			<br>
+			<i>@{{t.services.twitter.screenName}}</i>
+			<br>
+			<br>
+		</div>
+	<div id = "clear"> <button ng-click="clearUsers()" style="text-align:center">Clear</button> </div>
+	</ul>
+</div>
